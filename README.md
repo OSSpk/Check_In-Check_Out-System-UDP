@@ -5,7 +5,8 @@
 [![GitHub Issues](https://img.shields.io/github/issues/harismuneer/Check_In-Check_Out-System-UDP.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/harismuneer/Check_In-Check_Out-System-UDP/issues)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&label=Contributions&colorA=red&colorB=black	)](#)
 
-This is a **UDP based Check in/Check out System**. In this system, the user is able to Check in and Check out from the system by sending a data packet from its host machine. For instance:
+
+This is a UDP based Check in/Check out System. In this system, the user is able to Check in and Check out from the system by sending a data packet from its host machine. For instance:
 
 User/Client **must** send a message with the following format 
 
