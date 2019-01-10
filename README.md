@@ -5,51 +5,49 @@
 [![GitHub Issues](https://img.shields.io/github/issues/harismuneer/Check_In-Check_Out-System-UDP.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/harismuneer/Check_In-Check_Out-System-UDP/issues)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&label=Contributions&colorA=red&colorB=black	)](#)
 
+This is a **UDP based Check in/Check out System**. In this system, the user is able to Check in and Check out from the system by sending a data packet from its host machine. For instance:
 
-This is an online vote casting system using **TCP multithreaded server-client program**. The voters will log on from client systems and cast their votes. 
+User/Client **must** send a message with the following format 
+
+**YY-AAAA-CI (For check in) (e.g., 12-4159-CI)**
+Or
+**YY-AAAA-CO (For check out) (e.g., 12-4159-CO)**
+where
+**(YY-AAAA is your roll number)**
+
+The system/server must get the packet sent by the client and must process the packet accordingly.
+
 
 ## UDP (User Datagram Protocol):
-UDP uses a simple connectionless transmission model with a minimum of protocol mechanism. With UDP, computer applications can send messages, referred to as datagrams, to other hosts on an Internet Protocol (IP) network without prior communications to set up special transmission channels or data paths. Following are its characteristics:
+UDP uses a simple **connectionless transmission model** with a minimum of protocol mechanism. With UDP, computer applications can send messages, referred to as datagrams, to other hosts on an Internet Protocol (IP) network without prior communications to set up special transmission channels or data paths. Following are its characteristics:
 
-1.	There is no guarantee of delivery, ordering, or duplicate protection.
+**1.**	There is no guarantee of delivery, ordering, or duplicate protection.
 
-2.	Ideal for network applications where we can tolerate data loss but want to achieve low latency
+**2.**	Ideal for network applications where we can tolerate data loss but want to achieve low latency.
 
- UDP based Check in/Check out System. In this system, the user should be able to Check in and Check out from the system by sending a data packet from its host machine. For instance
-User must send a message with the following format 
-YY-AAAA-CI (For check in) (e.g., 12-4159-CI)
-Or
-YY-AAAA-CO (For check out) (e.g., 12-4159-CO)
- (YY-AAAA is your roll number)
-The system must get the packet sent by the client and must process the packet accordingly.
+## Complete Workflow
+The following cases are catered:-
 
-Your system must cater the following cases.
-Check in: 
+### Check in 
 •	Marks the in attendance of the client in a database of the students and returns a welcome message “Welcome Student YY-AAAA”
+
 •	If the user is already checked in it must send the message “You are already here.”
 
+### Check out
 
-
-
-Check out:
 •	Marks the out attendance for the client from the student database and then fill the empty place in the database (e.g., if a student initially placed at place 5 has left then all the students above position 5 must come one position down to fill that position). The server must send the message “Good Bye Student YY-AAAA! Have a nice day.”
+
 •	If the user didn’t check in and sent the checkout packet, the server must return the message “You didn’t check in today. Contact System Administrator.”
 
-Note: 
+## Constraints: 
 •	You must print all the members present in the database each time client makes a request to check in or check out.
+
 •	Server must not be restarted once started.
-
-
-
-## Note
-•	One client can cast a vote ONCE AND ONLY ONCE.
-
-•	The Server should **allocate a new thread for every new incoming Client**. 
 
 ## How to Run
 The client. and server.c files are provided. Just compile each file using the following command on Linux terminal or Windows Bash and run it (For client, obviously replace the server.c filename with client.c). Make sure the server is running before running any client.
 
-``` gcc –pthread server.c -o server.out ```
+``` gcc server.c -o server.out ```
 
 ----------
 
