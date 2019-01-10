@@ -8,11 +8,14 @@
 
 This is a UDP based Check in/Check out System. In this system, the user is able to Check in and Check out from the system by sending a data packet from its host machine. For instance:
 
-User/Client **must** send a message with the following format 
+User/Client **must** send a message with the following format: 
 
 **YY-AAAA-CI (For check in) (e.g., 12-4159-CI)**
+
 Or
+
 **YY-AAAA-CO (For check out) (e.g., 12-4159-CO)**
+
 where
 **(YY-AAAA is your roll number)**
 
@@ -40,7 +43,7 @@ The following cases are catered:-
 
 •	If the user didn’t check in and sent the checkout packet, the server must return the message “You didn’t check in today. Contact System Administrator.”
 
-## Constraints: 
+## Constraints
 •	You must print all the members present in the database each time client makes a request to check in or check out.
 
 •	Server must not be restarted once started.
