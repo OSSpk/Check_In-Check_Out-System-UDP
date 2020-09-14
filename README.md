@@ -1,7 +1,6 @@
 # 🙋‍♂️ Check In/Check Out System using UDP
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](#)
 [![GitHub Forks](https://img.shields.io/github/forks/harismuneer/Check_In-Check_Out-System-UDP.svg?style=social&label=Fork&maxAge=2592000)](https://www.github.com/harismuneer/Check_In-Check_Out-System-UDP/fork)
-[![Build Status](https://semaphoreapp.com/api/v1/projects/d4cca506-99be-44d2-b19e-176f36ec8cf1/128505/badge.svg)](#)
 [![GitHub Issues](https://img.shields.io/github/issues/harismuneer/Check_In-Check_Out-System-UDP.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/harismuneer/Check_In-Check_Out-System-UDP/issues)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&label=Contributions&colorA=red&colorB=black	)](#)
 
